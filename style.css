@@ -1,7 +1,7 @@
 body{font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  
+  background:white;
 }
 h1,h3,h2{font-family: 'Poppins', sans-serif;
 font-weight: 600;}
@@ -21,11 +21,11 @@ margin-top: 20px;
 }
 .header{width: 100% ;
 height:500px;
-
+background: hsl(193,100%,96%);
 margin-bottom: 100px;
 background-image: url(desktop.png);
 padding:20px;
-padding-top: 50px;
+animation: anim 12s linear 6s infinite alternate backwards running;
 }
 .nested{display: flex;
 flex-direction: row;
@@ -38,11 +38,13 @@ justify-content: center;
   width:500px;
   margin:10px;
 }
-.cont{border: ;
+.cont{
 margin-left: 20px;
+
 }
+.cont p{color: black;}
 .imag{
-  border:;
+  
   height: 400px;
   width:250px;
   flex-grow: 1;
@@ -54,7 +56,9 @@ img{height:100%;
 .words{
   margin-top:60px;
 }
-p{line-height: 1.5em;}
+p{line-height: 1.5em;
+  color: hsl(208,11%,55%);
+}
 .section1{width: auto;
 height:270px;
 flex-grow: 1;
@@ -72,43 +76,54 @@ margin-bottom: auto;
 
 .section2{width:700px;
 height:270px;
-
-border:;
 margin: 50px;
-
 }
-
+ 
 .grow{width: 95%;
 height:370px;
-border-radius: 8px;
+border-radius: 10px;
 margin-bottom: 50px;
-
-
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+box-sizing: border-box;
+box-shadow: 0 4px 10px 2px rgba(0,0,0,0.1);
 }
 
 .flow{width: 95%;
 height:370px;
-
-border-radius: 8px;
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+border-radius: 10px;
+box-sizing: border-box;
+box-shadow: 0 4px 10px 2px rgba(0,0,0,0.1);
 }
 
 .user{width: 95%;
 height:370px;
-
-border-radius: 8px;
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+border-radius: 10px;
 margin-top:50px;
 margin-bottom: 200px;
-
+box-sizing: border-box;
+box-shadow: 0 4px 10px 2px rgba(0,0,0,0.1);
 
 }
 
 .ready{width: 65%;
 height:200px;
-
-border-radius: 8px;
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+border-radius: 10px;
 position: absolute;
 top: 1950px;
 left:180px;
+box-sizing: border-box;
+box-shadow: 0 4px 10px 3px rgba(0,0,0,0.1);
 }
 
 .footer{
@@ -154,14 +169,157 @@ height: 25px;
 }
 a{text-decoration: none;
 color:#fff;}
-.btn1:hover{cursor:hand;
+.btn1:hover,.btn2:hover,.btn:hover{cursor:hand;
 height: 30px;
 background:#f1b6f0 ;}
 
 .ready h2{text-align: center;}
+
+@keyframes anim{
+  0%{background: #008aac;}
+  25%{background:#548b51cf;}
+  50%{background: #ff00fc;}
+  100%{background: #00ccff;}
+}
+
+@media(max-width:600px){
+  .container{
+    flex-wrap: wrap;
+   
+  }
+  body{
+  font-size: 12px;
+  
+}
+
+.huddle{height:10px;
+width:60px;
+margin-bottom:20px;
+margin-left: 100px;
+margin-top: 10px;
+
+}
+.btn{background:hsl(208,11%,55%);
+position: absolute;
+top:20px;
+right:10px;
+ margin: 20px;
+ margin-top: 10px;
+width: 80px;
+height: 8px;
+line-height: 6px;
+border-radius: 16px;
+font-size: 8px;
+}
+
+.header{width: 300px ;
+height:650px;
+margin-bottom: 70px;
+background-image: url(mobile.png);
+padding:5px;
+
+}
+.imag{
+  
+  height: 200px;
+  width:250px;
+  
+}
+
+ .nested {
+   flex-direction: column;
+   justify-content: center;
+   align-self: center;
+ }
+ .cont{
+   
+margin: 100px;
+text-align: center;
+}
+
+.words{
+  margin-top:0px;
+  
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+  .section img{float: left;
+  display: block;
+  }
+  .section1{
+    width: 250px;
+height:70px;
+order: 1;
+margin-top: 5px;
+margin-bottom: 20px;
+
+}
+.section2{width:240px;
+height:150px;
+
+}
+
+  .grow{
+ width: 270px;
+height:450px;
+border-radius: 6px;
+
+margin-bottom: 50px;
+
+
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+box-sizing: border-box;
+box-shadow: 0 4px 10px 2px rgba(0,0,0,0.1);
+}
+
+.flow{
+  width: 270px;
+height:450px;;
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+border-radius: 10px;
+box-sizing: border-box;
+box-shadow: 0 4px 10px 2px rgba(0,0,0,0.1);
+}
+
+.user{
+ width: 270px;
+height:450px;
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+border-radius: 10px;
+margin-top:40px;
+margin-bottom: 50px;
+
+
+}
+
+.ready{width: 300px;
+height:100px;
+border: 2px solid gray;
+border-style: hidden;
+background:#fff;
+border-radius: 10px;
+position: relative;
+top:40px;
+left:5px;
+
+}
+.ready h2{font-size: small;
+}
+.one{width: auto;
+margin-top: 70px;
+margin-left: 20px;
+}
+}
 /*.color{background:hsl(193,100%,96%);
-background:hsl(192,100%,9%);
-background:hsl(208,11%,55%);
+background
+background:grayish b hsl(208,11%,55%);
  pink:hsl(322,100%,66%) 
  ...
  headings:poppins: weight 600 
